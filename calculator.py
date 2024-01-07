@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import fun
 
 print("Welcome to my calculator!")
 print("You can use the following operations: +, -, *, /, %")
@@ -13,16 +14,14 @@ if n1 == "" or n2 == "" or not n1.isdigit() or not n2.isdigit():
 op = input("which opeartion you want to apply : ")
 
 if op == "+":
-    print("The result is : " + str(int(n1) + int(n2)))
+    print("The result is : " + fun.sum(n1, n2))
 elif op == "-":
-    print("The result is : " + str(int(n1) - int(n2)))
+    print("The result is : " + fun.sub(n1, n2))
 elif op == "*":
-    print("The result is : " + str(int(n1) * int(n2)))
+    print("The result is : " + fun.mul(n1, n2))
 elif op == "/":
-    print("The result is : " + str(int(n1) / int(n2)))
+    print("The result is : " + fun.div(n1, n2))
 elif op == "%":
-    print("The result is : " + str(int(n1) % int(n2)))
-elif op == "-":
-    print("The result is : " + str(int(n1) - int(n2)))
+    print("The result is : " + fun.mod(n1, n2))
 else:
     print("Invalid opeartion")
